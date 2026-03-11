@@ -7,4 +7,10 @@ matplotlib
 seaborn
 lightgbm
 statsmodels
+setuptools
+pymongo
+certifi
+
+
+##-e .
 
