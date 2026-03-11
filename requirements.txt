@@ -1,0 +1,10 @@
+python-dotenv
+numpy
+pandas
+pymongo
+scikit-learn
+matplotlib
+seaborn
+lightgbm
+statsmodels
+
