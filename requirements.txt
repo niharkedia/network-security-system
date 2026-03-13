@@ -10,7 +10,6 @@ statsmodels
 setuptools
 pymongo
 certifi
-
-
+##pymongo[srv]==3.11
 ##-e .
 
