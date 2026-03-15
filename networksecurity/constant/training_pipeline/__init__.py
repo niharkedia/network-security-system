@@ -20,3 +20,14 @@ DATA_INGESTION_INGESTED_DIR="ingested_data"
 TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
 TRAIN_TEST_RATION = 0.2
+
+SCHEMA_FILE_PATH=os.path.join("data_schema","schema.yaml")
+
+"""
+Data Validation related constants start with DATA_VALIDATION VAR name
+"""
+DATA_VALIDATION_DIR_NAME="data_validation"
+DATA_VALIDATION_VALID_DIR="validated"
+DATA_VALIDATION_INVALID_DIR="invalid"
+DATA_VALIDATION_DRIFT_REPORT_DIR="drift_report"
+DATA_VALIDATION_DRIFT_REPORT_FILE_NAME="Report.yaml"

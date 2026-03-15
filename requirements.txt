@@ -9,7 +9,9 @@ lightgbm
 statsmodels
 setuptools
 pymongo
+scipy
+dill
+pyyaml  
 certifi
 ##pymongo[srv]==3.11
 ##-e .
-
