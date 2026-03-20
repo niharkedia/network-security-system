@@ -13,5 +13,9 @@ scipy
 dill
 pyyaml  
 certifi
+xgboost
+lightgbm
+catboost
+mlflow
 ##pymongo[srv]==3.11
 ##-e .

@@ -23,6 +23,10 @@ TRAIN_TEST_RATION = 0.2
 
 SCHEMA_FILE_PATH=os.path.join("data_schema","schema.yaml")
 
+SAVED_MODEL_DIR=os.path.join(ARTIFACT_DIR,"saved_model")
+
+MODEL_FILE_NAME="model.pkl"
+
 """
 Data Validation related constants start with DATA_VALIDATION VAR name
 """
@@ -45,3 +49,13 @@ DATA_TRANSFORMATION_IMPUTER_PARAMS:dict={
     "weights":"uniform"
 }
 PREPROCESSING_OBJECT_FILE_NAME="preprocessor.pkl"
+
+
+"""
+Model Trainer related constants start with MODEL_TRAINER VAR name
+"""
+MODEL_TRAINER_DIR_NAME="model_trainer"
+MODEL_TRAINER_TRAINED_MODEL_DIR="trained_model"
+MODEL_TRAINER_EXPECTED_SCORE="0.6"
+MODEL_TRAINER_OVER_FITTING_UNDER_FITTING_THRESHOLD="0.05"
+
