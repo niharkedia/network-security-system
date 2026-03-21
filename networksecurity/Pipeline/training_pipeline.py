@@ -10,10 +10,18 @@ from networksecurity.logging.logger import logging
 from networksecurity.exception.exception import NetworkSecurityException
 import os,sys
 
+from networksecurity.utils.main_utils.s3_utils import S3Sync
+from networksecurity.constant.training_pipeline import (
+    TRAINING_BUCKET_NAME,
+    SAVED_MODEL_DIR,
+    
+)
+
 
 class TrainingPipeline:
     def __init__(self):
         self.training_pipeline_config=Training_Pipeline_Config()
+        self.s3_sync = S3Sync()
         self.data_ingestion_config=DataIngestionConfig(training_pipeline_config=self.training_pipeline_config)
         self.data_validation_config=DataValidationConfig(training_pipeline_config=self.training_pipeline_config)
         self.data_transformation_config=DataTransformationConfig(training_pipeline_config=self.training_pipeline_config)
@@ -62,6 +70,25 @@ class TrainingPipeline:
         except Exception as e:
             logging.error(f"Error in model training: {e}")
             raise NetworkSecurityException(e,sys)
+
+
+     ## local artifact is going to s3 bucket    
+    def sync_artifact_dir_to_s3(self):
+        try:
+            aws_bucket_url = f"s3://{TRAINING_BUCKET_NAME}/artifact/{self.training_pipeline_config.timestamp}"
+            self.s3_sync.sync_folder_to_s3(folder = self.training_pipeline_config.artifact_dir,aws_bucket_url=aws_bucket_url)
+        except Exception as e:
+            raise NetworkSecurityException(e,sys)
+        
+    ## local final model is going to s3 bucket 
+        
+    def sync_saved_model_dir_to_s3(self):
+        try:
+            aws_bucket_url = f"s3://{TRAINING_BUCKET_NAME}/final_model/{self.training_pipeline_config.timestamp}"
+            self.s3_sync.sync_folder_to_s3(folder = self.training_pipeline_config.model_dir,aws_bucket_url=aws_bucket_url)
+        except Exception as e:
+            raise NetworkSecurityException(e,sys)
+        
     
     def run_pipeline(self):
         try:
@@ -71,7 +98,8 @@ class TrainingPipeline:
             data_validation_artifact=self.start_data_validation(data_ingestion_artifact)
             data_transformation_artifact=self.start_data_transformation(data_validation_artifact)
             model_trainer_artifact=self.start_model_trainer(data_transformation_artifact)
-
+            self.sync_artifact_dir_to_s3()
+            self.sync_saved_model_dir_to_s3()
             logging.info("Training pipeline completed")
             return model_trainer_artifact
         except Exception as e:
