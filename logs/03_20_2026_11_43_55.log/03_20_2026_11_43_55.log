@@ -1,0 +1,45 @@
+[2026-03-20 11:43:58,337] 17 root - INFO - Starting data ingestion
+[2026-03-20 11:43:58,338] 24 root - INFO - Data ingestion initiated
+[2026-03-20 11:43:58,338] 36 root - INFO - Exporting collection as dataframe
+[2026-03-20 11:44:02,722] 44 root - INFO - Exported collection as dataframe
+[2026-03-20 11:44:02,731] 49 root - INFO - Dropped _id column
+[2026-03-20 11:44:02,731] 52 root - INFO - Replaced na with np.nan
+[2026-03-20 11:44:02,731] 60 root - INFO - Exporting data into feature store
+[2026-03-20 11:44:02,819] 69 root - INFO - Exported data into feature store
+[2026-03-20 11:44:02,819] 79 root - INFO - Splitting data as train test
+[2026-03-20 11:44:02,824] 86 root - INFO - Split data into train and test
+[2026-03-20 11:44:02,827] 88 root - INFO - Exited spilt_data_as_train_test method of DataIngestion class
+[2026-03-20 11:44:02,828] 96 root - INFO - Exporting data into train and test files
+[2026-03-20 11:44:02,894] 105 root - INFO - Exported data into train and test files
+[2026-03-20 11:44:02,894] 107 root - INFO - Exited spilt_data_as_train_test method of DataIngestion class
+[2026-03-20 11:44:02,895] 126 root - INFO - Data ingestion completed
+[2026-03-20 11:44:02,895] 27 root - INFO - Data ingestion completed
+[2026-03-20 11:44:02,895] 29 root - INFO - Starting data validation
+[2026-03-20 11:44:02,897] 98 root - INFO - Starting data validation
+[2026-03-20 11:44:02,926] 40 root - INFO - Validating number of columns
+[2026-03-20 11:44:02,926] 43 root - INFO - Expected number of columns: 31
+[2026-03-20 11:44:02,926] 44 root - INFO - Actual number of columns: 31
+[2026-03-20 11:44:02,926] 40 root - INFO - Validating number of columns
+[2026-03-20 11:44:02,926] 43 root - INFO - Expected number of columns: 31
+[2026-03-20 11:44:02,926] 44 root - INFO - Actual number of columns: 31
+[2026-03-20 11:44:02,926] 55 root - INFO - Checking if numerical columns exist in dataframe
+[2026-03-20 11:44:02,927] 60 root - INFO - Numerical columns found: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report', 'Result']
+[2026-03-20 11:44:02,927] 55 root - INFO - Checking if numerical columns exist in dataframe
+[2026-03-20 11:44:02,928] 60 root - INFO - Numerical columns found: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report', 'Result']
+[2026-03-20 11:44:03,054] 36 root - INFO - Data validation completed
+[2026-03-20 11:44:03,054] 38 root - INFO - Starting data transformation
+[2026-03-20 11:44:03,054] 23 root - INFO - Data Transformation initialized
+[2026-03-20 11:44:03,054] 66 root - INFO - Initiating data transformation
+[2026-03-20 11:44:03,054] 31 root - INFO - Reading data from D:\Network Security System\Artifacts\ingested_data\train.csv
+[2026-03-20 11:44:03,074] 31 root - INFO - Reading data from D:\Network Security System\Artifacts\ingested_data\test.csv
+[2026-03-20 11:44:03,082] 49 root - INFO - Getting data transformer object
+[2026-03-20 11:44:03,082] 53 root - INFO - KNNImputer object created successfully with parameters: {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2026-03-20 11:44:03,082] 58 root - INFO - Data transformer object created successfully
+[2026-03-20 11:44:03,097] 59 root - INFO - Saving object to D:\Network Security System\Artifacts\data_transformation\transformed_object\preprocessor.pkl
+[2026-03-20 11:44:03,100] 64 root - INFO - Object saved to D:\Network Security System\Artifacts\data_transformation\transformed_object\preprocessor.pkl
+[2026-03-20 11:44:03,100] 102 root - INFO - Data transformation initiated
+[2026-03-20 11:44:03,101] 45 root - INFO - Data transformation completed
+[2026-03-20 11:44:03,101] 47 root - INFO - Starting model training
+[2026-03-20 11:44:03,101] 33 root - INFO - ==============================Model Trainer Inititation==============================
+[2026-03-20 11:44:03,101] 36 root - INFO - ==============================Model Trainer Inititation Completed==============================
+[2026-03-20 11:44:03,101] 217 root - INFO - ==============================Model Trainer Initiation==============================

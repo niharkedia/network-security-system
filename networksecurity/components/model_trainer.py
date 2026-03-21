@@ -5,7 +5,6 @@ from networksecurity.logging.logger import logging
 from networksecurity.utils.main_utils.utils import load_object,save_object,load_numpy_array_data,evaluate_model
 from networksecurity.utils.ml_utils.model.estimator import NetworkModel
 from networksecurity.utils.ml_utils.metric.classification_metric import get_classification_score
-from networksecurity.constant.training_pipeline import MLFLOW_TRACKING_URI, MLFLOW_EXPERIMENT_NAME
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -22,6 +21,8 @@ from catboost import CatBoostClassifier
 import mlflow
 import mlflow.sklearn
 from mlflow.models.signature import infer_signature
+import dagshub
+from dotenv import load_dotenv
 
 
 
@@ -49,9 +50,7 @@ class ModelTrainer:
             dataset_type: "Train" or "Test" to differentiate runs
         """
         try:
-            mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
-            mlflow.set_experiment(MLFLOW_EXPERIMENT_NAME)
-
+        
             with mlflow.start_run(run_name=f"{model_name}_{dataset_type}"):
 
                 # Log model name and hyperparameters
@@ -201,6 +200,9 @@ class ModelTrainer:
            
             save_object(self.model_trainer_config.trained_model_file_path,network_model)
 
+            save_object("final_model/model.pkl",best_model)
+            
+
             ## model trainer artifact
             model_trainer_artifact=ModelTrainerArtifact(
                 trained_model_file_path=self.model_trainer_config.trained_model_file_path,
@@ -216,6 +218,16 @@ class ModelTrainer:
     def initiate_model_trainer(self)->ModelTrainerArtifact:
         try:
             logging.info(f"{'='*30}Model Trainer Initiation{'='*30}")
+
+            ## Initialize DagsHub MLflow tracking (token from .env)
+            
+            env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), ".env")
+            load_dotenv(dotenv_path=env_path)
+            dagshub_token = os.getenv("DAGSHUB_USER_TOKEN")
+            if dagshub_token:
+                os.environ["DAGSHUB_USER_TOKEN"] = dagshub_token
+            dagshub.init(repo_owner='niharkedia', repo_name='network-security-system', mlflow=True)
+
             train_file_path = self.data_transformation_artifact.transformed_train_file_path
             test_file_path = self.data_transformation_artifact.transformed_test_file_path
 

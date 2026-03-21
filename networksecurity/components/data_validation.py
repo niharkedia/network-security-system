@@ -16,11 +16,11 @@ import os,sys
 
 
 class DataValidation:
-    def __init__(self,data_ingestion_artifact:DataIngestionArtifact,data_validation_config:DataValidationConfig):
+    def __init__(self,data_validation_config:DataValidationConfig,data_ingestion_artifact:DataIngestionArtifact):
        
         try:
-            self.data_ingestion_artifact=data_ingestion_artifact
             self.data_validation_config=data_validation_config
+            self.data_ingestion_artifact=data_ingestion_artifact
             self.schema_config=read_yaml_file(SCHEMA_FILE_PATH)
 
 

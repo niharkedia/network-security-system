@@ -100,6 +100,9 @@ class DataTransformation:
             train_file_path=self.data_transformation_config.transformed_train_file_path
             test_file_path=self.data_transformation_config.transformed_test_file_path
             logging.info("Data transformation initiated")
+
+            save_object("final_model/preprocessor.pkl",preprocessor)
+
             return DataTransformationArtifact(
                 transformed_train_file_path=train_file_path,
                 transformed_test_file_path=test_file_path,

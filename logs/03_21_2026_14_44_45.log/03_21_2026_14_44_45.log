@@ -1,0 +1,21 @@
+[2026-03-21 14:45:31,760] 68 root - INFO - Starting training pipeline
+[2026-03-21 14:45:31,762] 24 root - INFO - Starting data ingestion
+[2026-03-21 14:45:31,763] 36 root - INFO - Exporting collection as dataframe
+[2026-03-21 14:45:36,626] 44 root - INFO - Exported collection as dataframe
+[2026-03-21 14:45:36,645] 49 root - INFO - Dropped _id column
+[2026-03-21 14:45:36,646] 52 root - INFO - Replaced na with np.nan
+[2026-03-21 14:45:36,646] 60 root - INFO - Exporting data into feature store
+[2026-03-21 14:45:36,858] 69 root - INFO - Exported data into feature store
+[2026-03-21 14:45:36,858] 79 root - INFO - Splitting data as train test
+[2026-03-21 14:45:36,866] 86 root - INFO - Split data into train and test
+[2026-03-21 14:45:36,869] 88 root - INFO - Exited spilt_data_as_train_test method of DataIngestion class
+[2026-03-21 14:45:36,869] 96 root - INFO - Exporting data into train and test files
+[2026-03-21 14:45:36,981] 105 root - INFO - Exported data into train and test files
+[2026-03-21 14:45:36,981] 107 root - INFO - Exited spilt_data_as_train_test method of DataIngestion class
+[2026-03-21 14:45:36,982] 126 root - INFO - Data ingestion completed
+[2026-03-21 14:45:36,982] 27 root - INFO - Data ingestion completed
+[2026-03-21 14:45:36,983] 35 root - INFO - Starting data validation
+[2026-03-21 14:45:36,988] 98 root - INFO - Starting data validation
+[2026-03-21 14:45:36,989] 41 root - ERROR - Error in data validation: Error occured in python script name[D:\Network Security System\networksecurity\components\data_validation.py] line number [99] error message ['DataValidationConfig' object has no attribute 'training_file_path']
+[2026-03-21 14:45:36,989] 78 root - ERROR - Error in training pipeline: Error occured in python script name[D:\Network Security System\networksecurity\Pipeline\training_pipeline.py] line number [37] error message [Error occured in python script name[D:\Network Security System\networksecurity\components\data_validation.py] line number [99] error message ['DataValidationConfig' object has no attribute 'training_file_path']]
+[2026-03-21 14:45:36,989] 51 root - ERROR - Error in training pipeline: Error occured in python script name[D:\Network Security System\networksecurity\Pipeline\training_pipeline.py] line number [71] error message [Error occured in python script name[D:\Network Security System\networksecurity\Pipeline\training_pipeline.py] line number [37] error message [Error occured in python script name[D:\Network Security System\networksecurity\components\data_validation.py] line number [99] error message ['DataValidationConfig' object has no attribute 'training_file_path']]]

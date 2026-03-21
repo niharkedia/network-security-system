@@ -1,0 +1,145 @@
+[2026-03-20 12:26:21,158] 17 root - INFO - Starting data ingestion
+[2026-03-20 12:26:21,158] 24 root - INFO - Data ingestion initiated
+[2026-03-20 12:26:21,158] 36 root - INFO - Exporting collection as dataframe
+[2026-03-20 12:27:27,106] 44 root - INFO - Exported collection as dataframe
+[2026-03-20 12:27:27,113] 49 root - INFO - Dropped _id column
+[2026-03-20 12:27:27,114] 52 root - INFO - Replaced na with np.nan
+[2026-03-20 12:27:27,114] 60 root - INFO - Exporting data into feature store
+[2026-03-20 12:27:27,180] 69 root - INFO - Exported data into feature store
+[2026-03-20 12:27:27,180] 79 root - INFO - Splitting data as train test
+[2026-03-20 12:27:27,185] 86 root - INFO - Split data into train and test
+[2026-03-20 12:27:27,186] 88 root - INFO - Exited spilt_data_as_train_test method of DataIngestion class
+[2026-03-20 12:27:27,187] 96 root - INFO - Exporting data into train and test files
+[2026-03-20 12:27:27,266] 105 root - INFO - Exported data into train and test files
+[2026-03-20 12:27:27,266] 107 root - INFO - Exited spilt_data_as_train_test method of DataIngestion class
+[2026-03-20 12:27:27,266] 126 root - INFO - Data ingestion completed
+[2026-03-20 12:27:27,267] 27 root - INFO - Data ingestion completed
+[2026-03-20 12:27:27,267] 29 root - INFO - Starting data validation
+[2026-03-20 12:27:27,269] 98 root - INFO - Starting data validation
+[2026-03-20 12:27:27,304] 40 root - INFO - Validating number of columns
+[2026-03-20 12:27:27,304] 43 root - INFO - Expected number of columns: 31
+[2026-03-20 12:27:27,304] 44 root - INFO - Actual number of columns: 31
+[2026-03-20 12:27:27,304] 40 root - INFO - Validating number of columns
+[2026-03-20 12:27:27,304] 43 root - INFO - Expected number of columns: 31
+[2026-03-20 12:27:27,304] 44 root - INFO - Actual number of columns: 31
+[2026-03-20 12:27:27,304] 55 root - INFO - Checking if numerical columns exist in dataframe
+[2026-03-20 12:27:27,306] 60 root - INFO - Numerical columns found: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report', 'Result']
+[2026-03-20 12:27:27,306] 55 root - INFO - Checking if numerical columns exist in dataframe
+[2026-03-20 12:27:27,306] 60 root - INFO - Numerical columns found: ['having_IP_Address', 'URL_Length', 'Shortining_Service', 'having_At_Symbol', 'double_slash_redirecting', 'Prefix_Suffix', 'having_Sub_Domain', 'SSLfinal_State', 'Domain_registeration_length', 'Favicon', 'port', 'HTTPS_token', 'Request_URL', 'URL_of_Anchor', 'Links_in_tags', 'SFH', 'Submitting_to_email', 'Abnormal_URL', 'Redirect', 'on_mouseover', 'RightClick', 'popUpWidnow', 'Iframe', 'age_of_domain', 'DNSRecord', 'web_traffic', 'Page_Rank', 'Google_Index', 'Links_pointing_to_page', 'Statistical_report', 'Result']
+[2026-03-20 12:27:27,443] 36 root - INFO - Data validation completed
+[2026-03-20 12:27:27,443] 38 root - INFO - Starting data transformation
+[2026-03-20 12:27:27,443] 23 root - INFO - Data Transformation initialized
+[2026-03-20 12:27:27,443] 66 root - INFO - Initiating data transformation
+[2026-03-20 12:27:27,443] 31 root - INFO - Reading data from D:\Network Security System\Artifacts\ingested_data\train.csv
+[2026-03-20 12:27:27,469] 31 root - INFO - Reading data from D:\Network Security System\Artifacts\ingested_data\test.csv
+[2026-03-20 12:27:27,480] 49 root - INFO - Getting data transformer object
+[2026-03-20 12:27:27,480] 53 root - INFO - KNNImputer object created successfully with parameters: {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2026-03-20 12:27:27,480] 58 root - INFO - Data transformer object created successfully
+[2026-03-20 12:27:27,494] 59 root - INFO - Saving object to D:\Network Security System\Artifacts\data_transformation\transformed_object\preprocessor.pkl
+[2026-03-20 12:27:27,498] 64 root - INFO - Object saved to D:\Network Security System\Artifacts\data_transformation\transformed_object\preprocessor.pkl
+[2026-03-20 12:27:27,498] 102 root - INFO - Data transformation initiated
+[2026-03-20 12:27:27,498] 59 root - INFO - Saving object to final_model/preprocessor.pkl
+[2026-03-20 12:27:27,502] 64 root - INFO - Object saved to final_model/preprocessor.pkl
+[2026-03-20 12:27:27,503] 45 root - INFO - Data transformation completed
+[2026-03-20 12:27:27,503] 47 root - INFO - Starting model training
+[2026-03-20 12:27:27,503] 33 root - INFO - ==============================Model Trainer Inititation==============================
+[2026-03-20 12:27:27,503] 36 root - INFO - ==============================Model Trainer Inititation Completed==============================
+[2026-03-20 12:27:27,503] 220 root - INFO - ==============================Model Trainer Initiation==============================
+[2026-03-20 12:27:28,925] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-03-20 12:27:28,929] 107 dagshub - INFO - Accessing as niharkedia
+[2026-03-20 12:27:30,448] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/niharkedia/network-security-system "HTTP/1.1 200 OK"
+[2026-03-20 12:27:31,981] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-03-20 12:27:31,983] 107 dagshub - INFO - Initialized MLflow to track repo "niharkedia/network-security-system"
+[2026-03-20 12:27:31,984] 107 dagshub - INFO - Repository niharkedia/network-security-system initialized!
+[2026-03-20 12:27:31,984] 94 root - INFO - Loading numpy array from D:\Network Security System\Artifacts\data_transformation\transformed\train.npy
+[2026-03-20 12:27:31,986] 94 root - INFO - Loading numpy array from D:\Network Security System\Artifacts\data_transformation\transformed\test.npy
+[2026-03-20 12:27:31,987] 241 root - INFO - Splitting data into training and testing sets
+[2026-03-20 12:27:31,987] 242 root - INFO - Training data shape: (17688, 30)
+[2026-03-20 12:27:31,987] 243 root - INFO - Testing data shape: (4422, 30)
+[2026-03-20 12:27:31,987] 93 root - INFO - Training the model
+[2026-03-20 12:27:31,987] 105 root - INFO - Evaluating the model
+[2026-03-20 12:27:31,987] 109 root - INFO - Training KNeighborsClassifier
+[2026-03-20 12:27:38,265] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:27:38,272] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:27:38,272] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:27:38,277] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:27:38,277] 126 root - INFO - KNeighborsClassifier - Test Accuracy: 0.9674355495251018
+[2026-03-20 12:27:38,277] 109 root - INFO - Training RandomForestClassifier
+[2026-03-20 12:27:43,543] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:27:43,549] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:27:43,550] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:27:43,553] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:27:43,553] 126 root - INFO - RandomForestClassifier - Test Accuracy: 0.9834916327453641
+[2026-03-20 12:27:43,553] 109 root - INFO - Training DecisionTreeClassifier
+[2026-03-20 12:27:43,728] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:27:43,735] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:27:43,735] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:27:43,739] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:27:43,740] 126 root - INFO - DecisionTreeClassifier - Test Accuracy: 0.9588421528720036
+[2026-03-20 12:27:43,740] 109 root - INFO - Training SVC
+[2026-03-20 12:28:10,285] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:28:10,293] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:28:10,293] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:28:10,299] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:28:10,299] 126 root - INFO - SVC - Test Accuracy: 0.9678878335594754
+[2026-03-20 12:28:10,299] 109 root - INFO - Training GaussianNB
+[2026-03-20 12:28:10,320] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:28:10,328] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:28:10,328] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:28:10,332] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:28:10,332] 126 root - INFO - GaussianNB - Test Accuracy: 0.6040253279059249
+[2026-03-20 12:28:10,332] 109 root - INFO - Training LogisticRegression
+[2026-03-20 12:28:10,396] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:28:10,403] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:28:10,403] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:28:10,407] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:28:10,407] 126 root - INFO - LogisticRegression - Test Accuracy: 0.9251469923111714
+[2026-03-20 12:28:10,407] 109 root - INFO - Training AdaBoostClassifier
+[2026-03-20 12:28:21,354] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:28:21,361] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:28:21,361] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:28:21,365] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:28:21,365] 126 root - INFO - AdaBoostClassifier - Test Accuracy: 0.9360018091361375
+[2026-03-20 12:28:21,365] 109 root - INFO - Training GradientBoostingClassifier
+[2026-03-20 12:29:00,934] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:29:00,940] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:29:00,940] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:29:00,944] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:29:00,944] 126 root - INFO - GradientBoostingClassifier - Test Accuracy: 0.9821347806422434
+[2026-03-20 12:29:00,944] 109 root - INFO - Training XGBClassifier
+[2026-03-20 12:29:02,343] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:29:02,350] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:29:02,350] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:29:02,354] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:29:02,354] 126 root - INFO - XGBClassifier - Test Accuracy: 0.9807779285391226
+[2026-03-20 12:29:02,354] 109 root - INFO - Training LGBMClassifier
+[2026-03-20 12:29:08,062] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:29:08,069] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:29:08,069] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:29:08,073] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:29:08,073] 126 root - INFO - LGBMClassifier - Test Accuracy: 0.9853007688828584
+[2026-03-20 12:29:08,073] 109 root - INFO - Training CatBoostClassifier
+[2026-03-20 12:29:19,656] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:29:19,662] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:29:19,662] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:29:19,665] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:29:19,665] 126 root - INFO - CatBoostClassifier - Test Accuracy: 0.9843962008141113
+[2026-03-20 12:29:19,665] 128 root - INFO - Model evaluation completed successfully
+[2026-03-20 12:29:19,666] 175 root - INFO - Best model name: LGBMClassifier
+[2026-03-20 12:29:19,666] 176 root - INFO - Best model score: 0.9853007688828584
+[2026-03-20 12:29:19,728] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:29:19,736] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:30:04,939] 86 root - INFO - MLflow tracking successful for LGBMClassifier (Train)
+[2026-03-20 12:30:05,728] 17 root - INFO - Calculating classification metrics
+[2026-03-20 12:30:05,733] 22 root - INFO - Classification metrics calculated successfully
+[2026-03-20 12:31:01,949] 86 root - INFO - MLflow tracking successful for LGBMClassifier (Test)
+[2026-03-20 12:31:03,269] 191 root - INFO - Train score: ClassificationMetricArtifact(accuracy=0.9897670737222976, precision=0.9877987294544721, recall=0.9939123376623377, f1_score=0.9908461032721387)
+[2026-03-20 12:31:03,269] 192 root - INFO - Test score: ClassificationMetricArtifact(accuracy=0.9853007688828584, precision=0.9850020267531414, recall=0.9886086248982913, f1_score=0.9868020304568528)
+[2026-03-20 12:31:03,269] 78 root - INFO - Loading object from D:\Network Security System\Artifacts\data_transformation\transformed_object\preprocessor.pkl
+[2026-03-20 12:31:03,271] 59 root - INFO - Saving object to D:\Network Security System\Artifacts\model_trainer\trained_model\model.pkl
+[2026-03-20 12:31:03,299] 64 root - INFO - Object saved to D:\Network Security System\Artifacts\model_trainer\trained_model\model.pkl
+[2026-03-20 12:31:03,299] 59 root - INFO - Saving object to final_model/model.pkl
+[2026-03-20 12:31:03,326] 64 root - INFO - Object saved to final_model/model.pkl
+[2026-03-20 12:31:03,326] 213 root - INFO - Model trained successfully
+[2026-03-20 12:31:03,339] 247 root - INFO - ==============================Model Trainer Initiation Completed==============================
+[2026-03-20 12:31:03,340] 54 root - INFO - Model training completed

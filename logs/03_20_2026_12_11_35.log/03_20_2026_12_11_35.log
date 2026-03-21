@@ -1,0 +1,3 @@
+[2026-03-20 12:11:37,568] 17 root - INFO - Starting data ingestion
+[2026-03-20 12:11:37,568] 24 root - INFO - Data ingestion initiated
+[2026-03-20 12:11:37,568] 36 root - INFO - Exporting collection as dataframe

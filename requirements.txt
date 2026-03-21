@@ -17,5 +17,9 @@ xgboost
 lightgbm
 catboost
 mlflow
+dagshub
+fastapi
+uvicorn
+python-multipart
 ##pymongo[srv]==3.11
 ##-e .
