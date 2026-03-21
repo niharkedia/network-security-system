@@ -1,0 +1,4 @@
+[2026-03-21 15:57:00,737] 78 root - INFO - Loading object from final_model/preprocessor.pkl
+[2026-03-21 15:57:00,742] 78 root - INFO - Loading object from final_model/model.pkl
+[2026-03-21 15:57:00,753] 19 root - INFO - Predicting the data
+[2026-03-21 15:57:00,760] 21 root - INFO - Prediction completed successfully
